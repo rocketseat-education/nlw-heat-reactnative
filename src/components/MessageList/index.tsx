@@ -32,7 +32,7 @@ export function MessageList() {
   useEffect(() => {
     const timer = setInterval(() => {
       if (messagesQueue.length > 0) {
-        setCurrentMessages(prevState => [messagesQueue[0], prevState[0], prevState[2]]);
+        setCurrentMessages(prevState => [messagesQueue[0], prevState[0], prevState[1]]);
         messagesQueue.shift();
       }
     }, 3000);
